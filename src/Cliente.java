@@ -10,9 +10,10 @@
  */
 public abstract class Cliente {
     
-    private String nome;
-    private String endereco;
-    private int telefone;
+    protected String nome;
+    protected String endereco;
+    protected int telefone;
+    protected double quantidade;
 
     public Cliente() {   }
 
@@ -63,8 +64,28 @@ public abstract class Cliente {
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
+    //public abstract void cadastrar();
+    //public abstract void imprimir();
+    
+    public String getInfo(){
+        return "{ 'nome': '" + nome 
+               + "' , 'endereco': " + endereco
+               + " , 'telefone': " + telefone + " }";
+    }
+    
     public abstract void cadastrar();
-    public abstract void imprimir();
     
+    public abstract void excluir();
+    protected abstract void zerarCadastro();
     
+    public double getQuantidade() {
+        return quantidade;
+    }
+
+    /**
+     * @param quantidade the quantidade to set
+     */
+    public void setQuantidade(double quantidade) {
+        this.quantidade = quantidade;
+    }
 }

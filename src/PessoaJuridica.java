@@ -11,6 +11,10 @@
 public class PessoaJuridica extends Cliente {
     private Long cnpj;
 
+    public PessoaJuridica() { }
+    
+    
+
     public PessoaJuridica(Long cnpj) {
         this.cnpj = cnpj;
     }
@@ -34,7 +38,7 @@ public class PessoaJuridica extends Cliente {
         this.cnpj = cnpj;
     }
     
-    @Override
+    /*@Override
     public void cadastrar(){
         
     }
@@ -42,5 +46,32 @@ public class PessoaJuridica extends Cliente {
     public void imprimir(){
         System.out.println("Nome: " + getNome() + "\nCPF: " + this.getCnpj() + "\nEndereço: " + getEndereco() +
                             "\nTelefone: " + getTelefone()); 
+    }*/
+    @Override
+    public  String getInfo(){
+        System.out.println("---- Dados do Desktop ----");
+       /*System.out.println("Modelo: " + this.getModelo());
+        System.out.println("Cor: " + this.getCor());
+        System.out.println("Preço: " + this.getPreco());
+        System.out.println("Potência da Fonte: " + this.getPotenciaFte());*/
+       return "{ 'nome': '" + nome 
+               + "' , 'endereco': " + endereco 
+               + " , 'telefone': " + telefone
+               + "' , 'CPF': " + this.getCnpj() + " }";
+       
+    }
+    @Override
+    public  void cadastrar(){
+        
+    }
+    @Override
+     public void excluir() {
+        this.zerarCadastro();
+        System.out.println("Nome Pessoa Física "+ nome + " excluído");
+    }
+
+    @Override
+    protected void zerarCadastro() {
+        this.setQuantidade( 0.0 );
     }
 }
