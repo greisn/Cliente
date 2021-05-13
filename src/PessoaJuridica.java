@@ -9,17 +9,17 @@
  * @author Acer
  */
 public class PessoaJuridica extends Cliente {
-    private Long cnpj;
+    private String cnpj;
 
     public PessoaJuridica() { }
     
     
 
-    public PessoaJuridica(Long cnpj) {
+    public PessoaJuridica(String cnpj) {
         this.cnpj = cnpj;
     }
 
-    public PessoaJuridica(Long cnpj, String nome, String endereco, int telefone) {
+    public PessoaJuridica(String cnpj, String nome, String endereco, int telefone) {
         super(nome, endereco, telefone);
         this.cnpj = cnpj;
     }
@@ -27,14 +27,14 @@ public class PessoaJuridica extends Cliente {
     /**
      * @return the cnpj
      */
-    public Long getCnpj() {
+    public String getCnpj() {
         return cnpj;
     }
 
     /**
      * @param cnpj the cnpj to set
      */
-    public void setCnpj(Long cnpj) {
+    public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
     
@@ -54,10 +54,10 @@ public class PessoaJuridica extends Cliente {
         System.out.println("Cor: " + this.getCor());
         System.out.println("Preço: " + this.getPreco());
         System.out.println("Potência da Fonte: " + this.getPotenciaFte());*/
-       return "{ 'nome': '" + nome 
-               + "' , 'endereco': " + endereco 
-               + " , 'telefone': " + telefone
-               + "' , 'CPF': " + this.getCnpj() + " }";
+       return "{ 'Nome': '" + nome 
+               + "' , 'Endereco': " + endereco 
+               + " , 'Telefone': " + telefone
+               + "' , 'CNPJ': " + this.getCnpj() + " } \n";
        
     }
     @Override

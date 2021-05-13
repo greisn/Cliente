@@ -9,17 +9,17 @@
  * @author Acer
  */
 public class PessoaFisica extends Cliente {
-    private Long cpf;
+    private String cpf;
 
     public PessoaFisica() { }
     
     
 
-    public PessoaFisica(Long cpf) {
+    public PessoaFisica(String cpf) {
         this.cpf = cpf;
     }
 
-    public PessoaFisica(Long cpf, String nome, String endereco, int telefone) {
+    public PessoaFisica(String cpf, String nome, String endereco, int telefone) {
         super(nome, endereco, telefone);
         this.cpf = cpf;
     }
@@ -27,14 +27,14 @@ public class PessoaFisica extends Cliente {
     /**
      * @return the cpf
      */
-    public Long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
     /**
      * @param cpf the cpf to set
      */
-    public void setCpf(Long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
     
@@ -55,10 +55,10 @@ public class PessoaFisica extends Cliente {
         System.out.println("Cor: " + this.getCor());
         System.out.println("Preço: " + this.getPreco());
         System.out.println("Potência da Fonte: " + this.getPotenciaFte());*/
-       return "{ 'nome': '" + nome 
-               + "' , 'endereco': " + endereco 
-               + " , 'telefone': " + telefone
-               + "' , 'CPF': " + this.getCpf() + " }";
+       return "{ 'Nome': '" + nome 
+               + "' , 'Endereco': " + endereco 
+               + " , 'Telefone': " + telefone
+               + "' , 'CPF': " + this.getCpf() + " } \n";
        
     }
     @Override
