@@ -19,7 +19,7 @@ public class PessoaJuridica extends Cliente {
         this.cnpj = cnpj;
     }
 
-    public PessoaJuridica(String cnpj, String nome, String endereco, int telefone) {
+    public PessoaJuridica(String cnpj, String nome, String endereco, String telefone) {
         super(nome, endereco, telefone);
         this.cnpj = cnpj;
     }

@@ -52,7 +52,7 @@ public class TesteCliente {
                     
                     String telefone = JOptionPane.showInputDialog("Telefone de " + nome );
                     telefone = telefone.replace(",", ".");
-                    pf.setTelefone(0);
+                    pf.setTelefone(telefone);
                    
                    
                     
@@ -83,7 +83,7 @@ public class TesteCliente {
                     String telefonePJ = JOptionPane.showInputDialog("Telefone de " + nomePJ );
                     
                     
-                    pj.setTelefone(0);
+                    pj.setTelefone(telefonePJ);
                     
                     
                     String cnpj = JOptionPane.showInputDialog("CNPJ de " + nomePJ);

@@ -19,7 +19,7 @@ public class PessoaFisica extends Cliente {
         this.cpf = cpf;
     }
 
-    public PessoaFisica(String cpf, String nome, String endereco, int telefone) {
+    public PessoaFisica(String cpf, String nome, String endereco, String telefone) {
         super(nome, endereco, telefone);
         this.cpf = cpf;
     }
